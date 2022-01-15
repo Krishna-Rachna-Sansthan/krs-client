@@ -1,6 +1,9 @@
+import Footer from './components/Footer'
+
 import Head from "next/head";
 import Carousel from "../components/Carousel";
 import { SliderData } from "../utils/SliderData";
+
 
 export default function Home() {
   return (
@@ -9,6 +12,11 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <div>
+        <Footer/>
+      </div>
+
 
       <main>
         <div>
@@ -82,6 +90,7 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
         </a>
       </footer> */}
+
     </div>
   );
 }
