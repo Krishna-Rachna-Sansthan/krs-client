@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+@layer components {
+  .icon {
+    @apply cursor-pointer w-9 h-9 hover:bg-[#e1e9ee] hover:bg-opacity-80 flex items-center justify-center rounded-full transition ease-out;
+  }
+}
+.card-container {
+  @apply rounded-[15px] bg-[#fff] shadow-2xl;
+}
+.slider {
+  @apply mx-auto min-h-[50vh] flex justify-center items-center;
+}
+.right-arrow {
+  @apply text-[5rem] text-black cursor-pointer select-none;
+}
+
+.left-arrow {
+  @apply text-[5rem] text-black cursor-pointer select-none;
+}
+.slide-description {
+  @apply min-h-[20%] flex flex-col justify-around px-[1em] text-[#262c42];
+}
+
+/* Media queries */
+.slide {
+  @apply opacity-0 duration-1000 ease-in-out;
+}
+
+.slide.active {
+  @apply opacity-100 duration-1000;
+}
+@media screen and (min-width: 250px) {
+  .slider-container {
+    @apply mx-auto;
+  }
+  .slide-description h3 {
+    @apply text-sm;
+  }
+  .slide-description p,
+  span {
+    @apply text-xs;
+  }
+  .card-container {
+    @apply mx-auto min-w-[150px] w-[80%];
+  }
+  .slider-container {
+    @apply max-w-[160px];
+  }
+  .arrow {
+    @apply h-[23px] w-[23px];
+  }
+}
+@media screen and (min-width: 340px) {
+  .arrow {
+    @apply h-[33px] w-[33px];
+  }
+  .slider-container {
+    @apply max-w-[590px];
+  }
+  .slide-description h3 {
+    @apply text-base mb-2;
+  }
+  .slide-description p,
+  span {
+    @apply text-sm;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .arrow {
+    @apply h-[43px] w-[43px];
+  }
+  .slider-container {
+    @apply max-w-[590px];
+  }
+  .slide-description h3 {
+    @apply text-lg mb-2;
+  }
+  .slide-description p,
+  span {
+    @apply text-base;
+  }
+}
+@media screen and (min-width: 1014px) {
+  .arrow {
+    @apply h-[63px] w-[63px];
+  }
+  .slider-container {
+    @apply max-w-[790px];
+  }
+  .slide-description h3 {
+    @apply text-xl mb-2;
+  }
+  .slide-description p,
+  span {
+    @apply text-lg;
+  }
+}
