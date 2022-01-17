@@ -1,6 +1,9 @@
 import Head from "next/head";
-import Carousel from "../components/Carousel";
 import { SliderData } from "../utils/SliderData";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import Card from "../components/Card";
+import { responsive } from "../utils/CarouselResponsiveness";
 
 export default function Home() {
   return (
@@ -11,9 +14,29 @@ export default function Home() {
       </Head>
 
       <main>
-        <div>
-          <Carousel slides={SliderData} />
-        </div>
+        <Carousel
+          swipeable={false}
+          draggable={false}
+          showDots={true}
+          responsive={responsive}
+          ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          keyBoardControl={true}
+          customTransition="all .5"
+          transitionDuration={500}
+          containerClass="carousel-container"
+          deviceType={this?.props.deviceType}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+        >
+          {SliderData.map((slide, index) => {
+            return (
+              <div className="slide slide-container" key={index}>
+                <Card source={slide.image} description={slide.description} />
+              </div>
+            );
+          })}
+        </Carousel>
         {/* <h1 className="text-6xl font-bold">
           Welcome to{' '}
           <a className="text-blue-600" href="https://nextjs.org">

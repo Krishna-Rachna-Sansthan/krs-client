@@ -4,8 +4,7 @@ export const SliderData = [
       "https://www.educative.io/cdn-cgi/image/f=auto,fit=cover,w=620/v2api/collection/10370001/6602565607751680/image/5334640753115136",
     description: {
       title: "How to be Like Elon Musk",
-      instructor: "Elon Musk",
-      price: "$99",
+      instructor: "Elon Musk", //
     },
   },
   {
@@ -14,7 +13,6 @@ export const SliderData = [
     description: {
       title: "How to be Like Elon Musk",
       instructor: "Elon Musk",
-      price: "$99",
     },
   },
   {
@@ -23,7 +21,6 @@ export const SliderData = [
     description: {
       title: "How to be Like Elon Musk",
       instructor: "Elon Musk",
-      price: "$99",
     },
   },
   {
@@ -32,7 +29,6 @@ export const SliderData = [
     description: {
       title: "How to be Like Elon Musk",
       instructor: "Elon Musk",
-      price: "$99",
     },
   },
   {
@@ -41,7 +37,6 @@ export const SliderData = [
     description: {
       title: "How to be Like Elon Musk",
       instructor: "Elon Musk",
-      price: "$99",
     },
   },
 ];
